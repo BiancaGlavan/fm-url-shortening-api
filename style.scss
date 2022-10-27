@@ -141,47 +141,60 @@ $hover-button-color: hsl(180, 52%, 70%);
 
 
 //SHORTEN INPUT
-.shorten-content {
+.shorten-main-content {
     background-color: $primary-dark-violet;
     background-image: url("./images/bg-shorten-desktop.svg");
     background-size: cover;
     padding: 35px;
     border-radius: 7px;
-    display: flex;
-    justify-content: space-between;
     position: absolute;
     width: calc(100% - 20px);
 
-    .shorten-input {
-        padding: 10px 20px;
-        border-radius: 7px;
-        border: none;
-        outline: none;
-        flex-grow: 1;
-    }
+    .shorten-content {
+        display: flex;
+        justify-content: space-between;
 
-    .shorten-button {
-        background-color: $primary-cyan;
-        color: $white;
-        border-radius: 7px;
-        padding: 10px 25px;
-        margin-left: 25px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: $hover-button-color;
+        .shorten-input {
+            padding: 10px 20px;
+            border-radius: 7px;
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            z-index: 1;
         }
+
+        .shorten-button {
+            background-color: $primary-cyan;
+            color: $white;
+            border-radius: 7px;
+            padding: 10px 25px;
+            margin-left: 25px;
+            cursor: pointer;
+            z-index: 1;
+
+            &:hover {
+                background-color: $hover-button-color;
+            }
+        }
+
+
     }
 
-
+    .error-msg {
+        color: $secondary-red;
+        font-style: italic;
+        font-size: 12px;
+        margin-top: 5px;
+    }
 }
+
 
 
 //STATISTICS SECTION
 .statistics-content {
     background-color: hsl(0, 6%, 94%);
     margin-top: 45px;
-    
+
 
     .statistics-title {
         text-align: center;
@@ -315,8 +328,8 @@ $hover-button-color: hsl(180, 52%, 70%);
         &:hover {
             background-color: $hover-button-color;
         }
-      
-       
+
+
 
     }
 }
@@ -325,13 +338,14 @@ $hover-button-color: hsl(180, 52%, 70%);
 //FOOTER SECTION
 .footer {
     background-color: $neutral-very-dark-violet;
-    
+
 }
+
 .footer-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-    
+
 
     svg {
         margin-top: 60px;
@@ -340,11 +354,11 @@ $hover-button-color: hsl(180, 52%, 70%);
         path {
             fill: $white;
         }
-            
-    }
-    
 
-   .footer-info {
+    }
+
+
+    .footer-info {
         display: flex;
         margin-top: 60px;
 
@@ -370,14 +384,14 @@ $hover-button-color: hsl(180, 52%, 70%);
                 }
             }
         }
-   }
+    }
 
-   .footer-social-media {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-    
+    .footer-social-media {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+
         svg {
             margin-left: 10px;
             width: 30px;
@@ -391,7 +405,7 @@ $hover-button-color: hsl(180, 52%, 70%);
                 }
             }
         }
-   }
+    }
 
 }
 
@@ -416,6 +430,7 @@ $hover-button-color: hsl(180, 52%, 70%);
 
         .url-right {
             margin-left: auto;
+
             .url-button {
                 padding: 5px 20px;
                 background-color: $primary-cyan;
@@ -423,7 +438,7 @@ $hover-button-color: hsl(180, 52%, 70%);
                 color: $white;
                 margin-left: 10px;
                 cursor: pointer;
-                
+
 
                 &:hover {
                     background-color: $hover-button-color;
@@ -433,7 +448,7 @@ $hover-button-color: hsl(180, 52%, 70%);
                     background-color: $primary-dark-violet;
                     padding: 5px 11px;
                 }
-                
+
             }
 
             .transformed-url {
@@ -441,6 +456,6 @@ $hover-button-color: hsl(180, 52%, 70%);
             }
         }
 
-        
+
     }
 }

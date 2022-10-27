@@ -106,34 +106,44 @@
   background-color: hsl(180deg, 52%, 70%);
 }
 
-.shorten-content {
+.shorten-main-content {
   background-color: hsl(257deg, 27%, 26%);
   background-image: url("./images/bg-shorten-desktop.svg");
   background-size: cover;
   padding: 35px;
   border-radius: 7px;
-  display: flex;
-  justify-content: space-between;
   position: absolute;
   width: calc(100% - 20px);
 }
-.shorten-content .shorten-input {
+.shorten-main-content .shorten-content {
+  display: flex;
+  justify-content: space-between;
+}
+.shorten-main-content .shorten-content .shorten-input {
   padding: 10px 20px;
   border-radius: 7px;
   border: none;
   outline: none;
   flex-grow: 1;
+  z-index: 1;
 }
-.shorten-content .shorten-button {
+.shorten-main-content .shorten-content .shorten-button {
   background-color: hsl(180deg, 66%, 49%);
   color: #fff;
   border-radius: 7px;
   padding: 10px 25px;
   margin-left: 25px;
   cursor: pointer;
+  z-index: 1;
 }
-.shorten-content .shorten-button:hover {
+.shorten-main-content .shorten-content .shorten-button:hover {
   background-color: hsl(180deg, 52%, 70%);
+}
+.shorten-main-content .error-msg {
+  color: hsl(0deg, 87%, 67%);
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .statistics-content {
