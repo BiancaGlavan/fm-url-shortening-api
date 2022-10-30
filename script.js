@@ -4,6 +4,13 @@ const apiUrl = 'https://api.shrtco.de/v2/shorten?url=';
 const urlList = document.querySelector('.url-list');
 const shortenUrl = document.querySelector('.shorten-url');
 const errorMSg = document.querySelector('.error-msg');
+const mobileMenu = document.querySelector('.hamburger-menu-container');
+const burgerIcon = document.querySelector('.hamburger-icon');
+
+
+burgerIcon.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+});
 
 const App = {
 

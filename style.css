@@ -27,7 +27,7 @@
 .nav-content .logo {
   margin-right: 20px;
 }
-.nav-content .hamburger-menu {
+.nav-content .hamburger-icon {
   display: none;
 }
 .nav-content .nav-links {
@@ -71,6 +71,9 @@
   position: relative;
   min-height: 600px;
   overflow: hidden;
+}
+.main-section .hamburger-menu {
+  display: none;
 }
 .main-section .illustration {
   position: absolute;
@@ -368,18 +371,77 @@
   .nav-content button {
     display: none;
   }
-  .nav-content .hamburger-menu {
+  .nav-content .hamburger-icon {
     display: flex;
     margin-left: auto;
     width: 30px;
     cursor: pointer;
+  }
+  .main-section .hamburger-menu-container {
+    display: block;
+    width: 90%;
+    background-color: hsl(257deg, 27%, 26%);
+    left: 100%;
+    border-radius: 7px;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+  }
+  .main-section .hamburger-menu-container.open {
+    display: block;
+    left: 5%;
+    z-index: 1;
+  }
+  .main-section .hamburger-menu-container .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-section .hamburger-menu-container .hamburger-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .main-section .hamburger-menu-container .hamburger-menu .nav-links li {
+    list-style: none;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .main-section .hamburger-menu-container .hamburger-menu .divider {
+    height: 0.3px;
+    width: 90%;
+    background-color: hsl(0deg, 0%, 75%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .main-section .hamburger-menu-container .hamburger-menu .login {
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .main-section .hamburger-menu-container .hamburger-menu .signup {
+    border-radius: 100px;
+    background-color: hsl(180deg, 66%, 49%);
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: 700;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .main-section .hamburger-menu-container .hamburger-menu .signup:hover {
+    background-color: hsl(180deg, 52%, 70%);
   }
   .main-section .illustration {
     width: 600px;
   }
   .main-section .container .main-text {
     width: 100%;
-    margin-top: 450px;
+    margin-top: 400px;
     text-align: center;
   }
   .main-section .container .main-text h1 {
@@ -451,15 +513,15 @@
     margin-top: 0;
   }
   .statistics-content .statistics-cards-container .detailed-records::before {
-    top: -79px;
+    top: -80px;
     left: 156px;
     width: 5px;
-    height: 54px;
+    height: 55px;
   }
   .statistics-content .statistics-cards-container .detailed-records::after {
     width: 5px;
-    height: 54px;
-    top: 239px;
+    height: 55px;
+    top: 240px;
     right: 156px;
   }
   .footer .footer-container {

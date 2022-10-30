@@ -41,7 +41,7 @@ $hover-button-color: hsl(180, 52%, 70%);
         margin-right: 20px;
     }
 
-    .hamburger-menu {
+    .hamburger-icon {
         display: none;
     }
 
@@ -96,6 +96,10 @@ $hover-button-color: hsl(180, 52%, 70%);
     position: relative;
     min-height: 600px;
     overflow: hidden;
+
+    .hamburger-menu {
+        display: none;
+    }
 
 
     .illustration {
@@ -489,7 +493,7 @@ $hover-button-color: hsl(180, 52%, 70%);
             display: none;
         }
 
-        .hamburger-menu {
+        .hamburger-icon {
             display: flex;
             margin-left: auto;
             width: 30px;
@@ -500,14 +504,86 @@ $hover-button-color: hsl(180, 52%, 70%);
 
     .main-section {
 
+        .hamburger-menu-container {
+            display: block;
+            width: 90%;
+            background-color: $primary-dark-violet;
+            left: 100%;
+            border-radius: 7px;
+            position: absolute;
+            transition: all ease-in-out 0.3s;
+
+            &.open {
+                display: block;
+                left: 5%;
+                z-index: 1;
+            }
+    
+            .hamburger-menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                
+    
+                .nav-links {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 30px;
+    
+                    li {
+                        list-style: none;
+                        color: $white;
+                        margin-bottom: 20px;
+                        margin-top: 10px;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                }
+    
+                .divider {
+                    height: 0.3px;
+                    width: 90%;
+                    background-color: $neutral-gray;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+    
+                .login {
+                    color: $white;
+                    font-weight: 700;
+                    cursor: pointer;
+                }
+    
+                .signup {
+                    border-radius: 100px;
+                    background-color: $primary-cyan;
+                    padding: 10px 15px;
+                    color: $white;
+                    font-weight: 700;
+                    width: 200px;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                    cursor: pointer;
+            
+                    &:hover {
+                        background-color: $hover-button-color;
+                    }
+                }
+            }
+            
+        }
+
         .illustration {
             width: 600px;
         }
 
+
         .container {
             .main-text {
                 width: 100%;
-                margin-top: 450px;
+                margin-top: 400px;
                 text-align: center;
 
                 h1 {
@@ -599,16 +675,16 @@ $hover-button-color: hsl(180, 52%, 70%);
             .detailed-records {
 
                 &::before {
-                    top: -79px;
+                    top: -80px;
                     left: 156px;
                     width: 5px;
-                    height: 54px;;
+                    height: 55px;;
                 }
 
                 &::after {
                     width: 5px;
-                    height: 54px;
-                    top: 239px;
+                    height: 55px;
+                    top: 240px;
                     right: 156px;
                 }
             }
