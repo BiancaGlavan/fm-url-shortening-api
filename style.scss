@@ -41,6 +41,10 @@ $hover-button-color: hsl(180, 52%, 70%);
         margin-right: 20px;
     }
 
+    .hamburger-menu {
+        display: none;
+    }
+
     .nav-links {
         display: flex;
         flex-direction: row;
@@ -426,10 +430,14 @@ $hover-button-color: hsl(180, 52%, 70%);
 
         .original-url {
             color: $neutral-very-dark-blue;
+            width: 68%;
+            word-wrap: break-word;
         }
 
         .url-right {
             margin-left: auto;
+            display: flex;
+
 
             .url-button {
                 padding: 5px 20px;
@@ -457,5 +465,200 @@ $hover-button-color: hsl(180, 52%, 70%);
         }
 
 
+    }
+}
+
+
+
+//MEDIA
+@media screen and (max-width: 940px) {
+    .main-section {
+        .illustration {
+            max-width: 550px;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .nav-content {
+        .nav-links {
+            display: none;
+        }
+
+        button {
+            display: none;
+        }
+
+        .hamburger-menu {
+            display: flex;
+            margin-left: auto;
+            width: 30px;
+            cursor: pointer;
+
+        }
+    }
+
+    .main-section {
+
+        .illustration {
+            width: 600px;
+        }
+
+        .container {
+            .main-text {
+                width: 100%;
+                margin-top: 450px;
+                text-align: center;
+
+                h1 {
+                    font-size: 40px;
+                    line-height: 49px;
+                    margin-bottom: 20px;
+                }
+
+                button {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+    }
+
+    .shorten-main-content {
+       .shorten-content {
+        display: flex;
+        flex-direction: column;
+
+        .shorten-button {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+       }
+    }
+
+    .statistics-content {
+        margin-top: 70px;
+        .url-list {
+            margin-top: 120px;
+            .shorten-url {
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+
+                .original-url {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    border-bottom: 1.5px solid rgb(213, 209, 209);
+                }
+
+                .url-right {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .transformed-url {
+                        margin-bottom: 20px;
+                    }
+
+                    .url-button {
+                        margin-left: 0;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+
+        .statistics-text {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .statistics-cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+
+            .statistics-card {
+                width: 100%;
+                max-width: 315px;
+                .statistics-img {
+                    left: calc(50% - 25px);
+                }
+            }
+
+            .brand-recognition {
+                margin-bottom: 50px;
+            }
+
+            .fully-customizable {
+                margin-top: 0;
+            }
+
+            .detailed-records {
+
+                &::before {
+                    top: -79px;
+                    left: 156px;
+                    width: 5px;
+                    height: 54px;;
+                }
+
+                &::after {
+                    width: 5px;
+                    height: 54px;
+                    top: 239px;
+                    right: 156px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .footer-info {
+                display: flex;
+                flex-direction: column;
+                margin-top: 0;
+                align-items: center;
+
+                .footer-details-info {
+                    margin-bottom: 20px;
+                    margin-right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .footer-list {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .main-section {
+        .illustration {
+            width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .statistics-content .statistics-cards-container .detailed-records {
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
     }
 }

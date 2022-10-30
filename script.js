@@ -48,9 +48,9 @@ const App = {
     printShortenLink: (data) => {
         let res = '';
         let newInput = `<div class="shorten-url">
-        <span class="original-url">${shortenInput.value}</span>
+        <div class="original-url">${shortenInput.value}</div>
         <div class="url-right">
-          <span class="transformed-url">${data.result.full_short_link2}</span>
+          <div class="transformed-url">${data.result.full_short_link2}</div>
           <button class="btn url-button" data-url="${data.result.full_short_link2}" onclick="App.copyToClipboard('${data.result.full_short_link2}')">Copy</button>
         </div>
       </div>`;
